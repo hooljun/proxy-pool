@@ -97,6 +97,7 @@ public class ProxyIpRedisServiceImpl implements IProxyIpRedisService {
 
     @Override
     public long totalCountRt() {
-        return redisCacheTemplate.opsForZSet().size(RedisKey.PROXY_IP_RT_KEY);
+        Long size = redisCacheTemplate.opsForZSet().size(RedisKey.PROXY_IP_RT_KEY);
+        return size == null ? 0L : size;
     }
 }

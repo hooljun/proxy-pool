@@ -18,7 +18,7 @@ import java.util.Date;
 @Data
 @ToString
 @Entity
-@Table(name = "ProxyIp")
+@Table(name = "proxy_ips")
 public class ProxyIp implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
